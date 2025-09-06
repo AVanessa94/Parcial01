@@ -1,70 +1,86 @@
-# 📘 Informe de Ejercicios  
+# 📘 Informe – Ejercicios del Parcial 1  
 
-## 1️⃣ Error en `invertir_lista` y código `estructural.py` – Programación estructurada  
+---
 
-⚠️ **Problema detectado:**  
-En la función `invertir_lista`, el código original estaba escrito de la siguiente manera:  
+## 🔹 Ejercicio 1 – `invertir_lista` y `estructural.py`  
+
+### ⚠️ Problema detectado  
+El código original en la función `invertir_lista` estaba escrito de esta forma:  
 
 ```python
 print(invertir_lista([1,2,3,4,5])
-En este caso, faltaba un paréntesis de cierre. El intérprete detecta que se abre una instrucción pero nunca se cierra, lo cual genera un error de sintaxis e impide que el programa pueda ejecutarse.
+Aquí faltaba un paréntesis de cierre.
+El intérprete detecta que se abre una instrucción pero nunca se cierra, lo que genera un error de sintaxis e impide que el programa pueda ejecutarse.
 
-✅ Corrección aplicada:
-La solución fue simplemente añadir el paréntesis faltante, quedando de la siguiente forma:
+✅ Corrección aplicada
+Se añadió el paréntesis faltante:
 
 python
 Copiar código
 print(invertir_lista([1,2,3,4,5]))
 Con esta corrección, el programa se ejecuta correctamente y devuelve el resultado esperado.
 
-📝 Explicación del ejercicio estructurado:
-En este archivo también se planteó un ejercicio cuyo objetivo era sumar todos los números de una lista y, además, identificar el número máximo dentro de la misma. Se tuvo en cuenta el caso en el que la lista estuviera vacía; en tal situación, la función debía retornar la tupla (0, None).
+📝 Explicación del ejercicio estructurado
+En el archivo estructural.py se planteó un ejercicio con el objetivo de:
 
-El funcionamiento consiste en inicializar las variables suma = 0 y maximo = lista[0]. Luego, se recorre la lista elemento por elemento. En cada iteración:
+Sumar todos los números de la lista.
 
-El valor se acumula en la variable suma.
+Encontrar el número máximo.
 
-Si el número actual es mayor que el valor almacenado en maximo, se actualiza dicho valor.
+En caso de que la lista esté vacía, retornar la tupla (0, None).
 
-Al finalizar, la función retorna la tupla con la suma total y el número máximo. Estos valores son mostrados en pantalla con mensajes que presentan los resultados.
+📌 Funcionamiento paso a paso:
 
-💡 Este ejercicio demuestra cómo aplicar estructuras de control simples para resolver un problema básico de acumulación y comparación en listas.
+Se inicializa suma = 0 y maximo = lista[0].
 
-2️⃣ Programación Orientada a Objetos – CuentaBancaria y Confirmacion
+Se recorre la lista elemento por elemento.
+
+En cada iteración, el valor se acumula en suma.
+
+Si el número actual es mayor que el valor almacenado en maximo, este se actualiza.
+
+Finalmente, se retorna la tupla (suma, maximo) y se imprimen los resultados.
+
+💡 Este ejercicio demuestra cómo aplicar estructuras de control básicas para resolver un problema de acumulación y comparación en listas.
+
+🔹 Ejercicio 2 – Programación Orientada a Objetos
 🏦 Clase CuentaBancaria
-Se desarrolló una clase llamada CuentaBancaria que representa el modelo de una cuenta de ahorros simple. La clase contiene dos atributos principales: titular y saldo.
+Se creó una clase que simula el manejo de una cuenta bancaria con las siguientes características:
 
-El método retirar permite restar una cantidad al saldo siempre que la cantidad sea positiva y que el saldo disponible sea suficiente. En caso contrario, el programa indica que los fondos son insuficientes.
+Atributos: titular y saldo.
 
-📌 Explicación paso a paso:
+Método retirar: permite realizar un retiro solo si la cantidad es positiva y no supera el saldo disponible.
 
-En el constructor __init__, se inicializan los valores del titular y el saldo.
+📌 Comportamiento:
 
-El método retirar recibe como argumento la cantidad a retirar.
+Si la cantidad es menor o igual a cero, se muestra un mensaje de error.
 
-Si la cantidad es menor o igual a cero, se notifica que la cantidad no es válida.
+Si la cantidad es válida y el saldo suficiente, se descuenta y se muestra el nuevo saldo.
 
-Si la cantidad es válida y no supera el saldo disponible, se descuenta y se muestra el nuevo saldo.
+En caso contrario, se notifica que no hay fondos suficientes.
 
-En caso de no cumplir con las condiciones, el sistema informa que no hay fondos suficientes.
-
-De esta forma, el programa logra simular de manera sencilla cómo se realizan los retiros en una cuenta real.
+De esta forma se simula el flujo de un retiro bancario.
 
 ✅ Clase Confirmacion
-Se diseñó una segunda clase llamada Confirmacion, enfocada en validar una compra según el saldo disponible de un cliente.
+También se diseñó una clase llamada Confirmacion, orientada a validar compras según el saldo disponible del cliente.
 
-El método confirmacion_compra recibe tres parámetros: titular, saldo y el valor de la compra a comparar. Si el valor de la compra es menor o igual al saldo, se muestra un mensaje de confirmación; de lo contrario, el sistema avisa que la compra excede el saldo disponible.
+📌 Comportamiento:
 
-📌 Explicación paso a paso:
+El método confirmacion_compra recibe: titular, saldo y valor de la compra.
 
-Se inicializan los atributos del titular, saldo y el valor a comparar.
+Si la compra no supera el saldo, se imprime un mensaje de confirmación y retorna True.
 
-Si el valor de la compra es menor o igual al saldo, se imprime el mensaje de confirmación y se retorna True.
+Si la compra excede el saldo, se informa el monto disponible y retorna False.
 
-Si el valor excede el saldo, se informa el monto disponible y se retorna False.
+De esta manera, se refuerza el concepto de validación de operaciones en POO, mostrando un ejemplo aplicable a un sistema de compras real.
 
-De esta manera, el programa simula un sistema de compras con validación automática del saldo disponible, reforzando los conceptos de programación orientada a objetos.
+✨ Conclusión General
+Los ejercicios permitieron:
 
-✨ Conclusión general:
-Los ejercicios trabajados permitieron identificar y corregir errores de sintaxis en Python, aplicar estructuras de control básicas para operaciones con listas, y finalmente implementar clases con atributos y métodos que representan escenarios de la vida real, como transacciones bancarias y validación de compras.
+Identificar y corregir errores de sintaxis.
 
+Implementar operaciones con estructuras de control básicas.
+
+Aplicar programación orientada a objetos en escenarios prácticos como operaciones bancarias y validación de compras.
+
+Esto garantiza un aprendizaje integral de los paradigmas de programación estructurada y orientada a objetos.
