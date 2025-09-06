@@ -1,16 +1,16 @@
-# 📘 Informe – Ejercicios del Parcial 1  
+# 📘 **Informe de Ejercicios – Parcial**
 
 ---
 
-## 🔹 Ejercicio 1 – `invertir_lista` y `estructural.py`  
+## 🔹 **Ejercicio 1 – `invertir_lista` y `estructural.py`**
 
-### ⚠️ Problema detectado  
-El código original en la función `invertir_lista` estaba escrito de esta forma:  
+### ⚠️ **Problema detectado**
+El código original en la función `invertir_lista` estaba escrito así:  
 
 ```python
 print(invertir_lista([1,2,3,4,5])
-Aquí faltaba un paréntesis de cierre.
-El intérprete detecta que se abre una instrucción pero nunca se cierra, lo que genera un error de sintaxis e impide que el programa pueda ejecutarse.
+❌ Aquí faltaba un paréntesis de cierre.
+El intérprete detecta que se abre una instrucción pero nunca se cierra, lo que genera un error de sintaxis e impide ejecutar el programa.
 
 ✅ Corrección aplicada
 Se añadió el paréntesis faltante:
@@ -23,11 +23,11 @@ Con esta corrección, el programa se ejecuta correctamente y devuelve el resulta
 📝 Explicación del ejercicio estructurado
 En el archivo estructural.py se planteó un ejercicio con el objetivo de:
 
-Sumar todos los números de la lista.
+🔢 Sumar todos los números de la lista
 
-Encontrar el número máximo.
+🔎 Encontrar el número máximo
 
-En caso de que la lista esté vacía, retornar la tupla (0, None).
+🛑 Si la lista está vacía → retornar (0, None)
 
 📌 Funcionamiento paso a paso:
 
@@ -35,52 +35,56 @@ Se inicializa suma = 0 y maximo = lista[0].
 
 Se recorre la lista elemento por elemento.
 
-En cada iteración, el valor se acumula en suma.
+En cada iteración:
 
-Si el número actual es mayor que el valor almacenado en maximo, este se actualiza.
+Se acumula el valor en suma.
 
-Finalmente, se retorna la tupla (suma, maximo) y se imprimen los resultados.
+Si el número actual > maximo, se actualiza.
 
-💡 Este ejercicio demuestra cómo aplicar estructuras de control básicas para resolver un problema de acumulación y comparación en listas.
+Se retorna (suma, maximo) y se imprime.
+
+💡 Conclusión: Este ejercicio demuestra cómo aplicar estructuras de control básicas para resolver un problema de acumulación y comparación.
 
 🔹 Ejercicio 2 – Programación Orientada a Objetos
 🏦 Clase CuentaBancaria
-Se creó una clase que simula el manejo de una cuenta bancaria con las siguientes características:
+Se creó una clase que simula el manejo de una cuenta bancaria.
 
-Atributos: titular y saldo.
+Características principales:
 
-Método retirar: permite realizar un retiro solo si la cantidad es positiva y no supera el saldo disponible.
+📌 Atributos: titular y saldo
 
-📌 Comportamiento:
+📌 Método retirar: valida y descuenta dinero del saldo
 
-Si la cantidad es menor o igual a cero, se muestra un mensaje de error.
+🔎 Comportamiento:
 
-Si la cantidad es válida y el saldo suficiente, se descuenta y se muestra el nuevo saldo.
+❌ Si la cantidad ≤ 0 → error
 
-En caso contrario, se notifica que no hay fondos suficientes.
+✅ Si la cantidad ≤ saldo → se descuenta y muestra el nuevo saldo
+
+⚠️ Si la cantidad > saldo → “Fondos insuficientes”
 
 De esta forma se simula el flujo de un retiro bancario.
 
-✅ Clase Confirmacion
-También se diseñó una clase llamada Confirmacion, orientada a validar compras según el saldo disponible del cliente.
+🛒 Clase Confirmacion
+Clase encargada de validar compras según el saldo disponible.
 
-📌 Comportamiento:
+Funcionamiento:
 
-El método confirmacion_compra recibe: titular, saldo y valor de la compra.
+✅ Si la compra ≤ saldo → confirma la compra y retorna True.
 
-Si la compra no supera el saldo, se imprime un mensaje de confirmación y retorna True.
-
-Si la compra excede el saldo, se informa el monto disponible y retorna False.
-
-De esta manera, se refuerza el concepto de validación de operaciones en POO, mostrando un ejemplo aplicable a un sistema de compras real.
+❌ Si la compra > saldo → informa saldo insuficiente y retorna False.
 
 ✨ Conclusión General
-Los ejercicios permitieron:
+Estos ejercicios permitieron:
 
-Identificar y corregir errores de sintaxis.
+🔧 Identificar y corregir errores de sintaxis
 
-Implementar operaciones con estructuras de control básicas.
+📊 Aplicar estructuras de control básicas en listas
 
-Aplicar programación orientada a objetos en escenarios prácticos como operaciones bancarias y validación de compras.
+🏗️ Implementar POO en escenarios prácticos como retiros bancarios y validación de compras
 
-Esto garantiza un aprendizaje integral de los paradigmas de programación estructurada y orientada a objetos.
+➡️ En conjunto, refuerzan los paradigmas estructurado y orientado a objetos, mostrando su aplicación en problemas reales.
+
+markdown
+Copiar código
+
