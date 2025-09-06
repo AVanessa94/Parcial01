@@ -1,0 +1,101 @@
+# 📘 Informe de Ejercicios
+
+## 1️⃣ Error en `invertir_lista` y código `estructural.py` – Programación estructurada  
+
+⚠️ **Problema detectado:**  
+En la función `invertir_lista` el código original estaba escrito así:  
+
+```python
+print(invertir_lista([1,2,3,4,5])
+❌ Aquí faltaba un paréntesis de cierre. El intérprete detecta que se abre una instrucción pero nunca se cierra, lo que genera un error de sintaxis e impide ejecutar el programa.
+
+✅ Corrección aplicada:
+Se añadió el paréntesis faltante:
+
+python
+Copiar código
+print(invertir_lista([1,2,3,4,5]))
+Con esta corrección, el programa se ejecuta correctamente y devuelve el resultado esperado.
+
+📝 Ejercicio estructurado:
+En el archivo estructural.py se planteó como objetivo:
+
+➕ Sumar todos los números de una lista.
+
+🔝 Encontrar el número máximo.
+
+🚫 Si la lista está vacía, retornar (0, None).
+
+🔧 Funcionamiento del código:
+
+Se inicializan las variables suma = 0 y maximo = lista[0].
+
+Se recorre la lista número por número.
+
+En cada iteración:
+
+El número se acumula en suma.
+
+Si es mayor que el máximo actual, se actualiza maximo.
+
+Al terminar, se retorna la tupla (suma, maximo).
+
+Finalmente, se imprime la suma total y el número máximo encontrado.
+
+✨ Conclusión:
+Este ejercicio demuestra cómo usar estructuras de control básicas para resolver problemas de acumulación y comparación dentro de listas.
+
+2️⃣ Clases CuentaBancaria y Confirmacion – Programación orientada a objetos
+🏦 Clase CuentaBancaria:
+Se diseñó para simular operaciones básicas de una cuenta.
+
+El constructor recibe el titular y el saldo inicial.
+
+El método retirar valida que:
+
+La cantidad sea positiva ➕.
+
+Exista saldo suficiente 💰.
+
+Si ambas condiciones se cumplen, descuenta el dinero, actualiza el saldo y retorna True.
+
+Si no, muestra un mensaje de error y retorna False.
+
+📌 Ejemplo práctico:
+
+Ana tiene un saldo de 100.
+
+Retirar 150 falla ❌ por fondos insuficientes.
+
+Retirar 50 se ejecuta ✅ y deja un saldo de 50.
+
+🛒 Clase Confirmacion:
+Se implementó para verificar si una compra puede realizarse según el saldo disponible.
+
+El método confirmacion_compra recibe: titular, saldo y valor de la compra.
+
+Si el valor de la compra es menor o igual al saldo:
+
+Muestra un mensaje confirmando la operación.
+
+Retorna True.
+
+Si el valor excede el saldo:
+
+Muestra un mensaje de advertencia.
+
+Retorna False.
+
+📌 Ejemplo práctico:
+
+Con saldo 100:
+
+Compra de 50 ✅ → permitida.
+
+Compra de 150 ❌ → rechazada por saldo insuficiente.
+
+✨ Conclusión general:
+Tanto CuentaBancaria como Confirmacion muestran cómo aplicar validaciones en programación orientada a objetos para manejar correctamente operaciones comunes. Ambas clases refuerzan la importancia de controlar datos de entrada y garantizar que las operaciones respeten las reglas del sistema.
+
+yaml
+Copiar código
